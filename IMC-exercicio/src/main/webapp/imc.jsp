@@ -1,3 +1,7 @@
+
+
+
+<%@page import="vmc.CalcularController"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -56,11 +60,11 @@
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control input-lg" id="userid"
-							placeholder="informe o peso" name="peso">
+							placeholder="informe o peso" name="peso" value="${param.peso }">
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control input-lg" id="password"
-							placeholder="informe a altura" name="altura">
+							placeholder="informe a altura" name="altura" value="${param.altura }">
 					</div>
 					<div class="form-group">
 						<button type="submit"
@@ -87,6 +91,7 @@
 		CalcularController cc = new CalcularController();
 		result = cc.retornarMessagem(peso, altura);
 		
+				
 	%>
 	<div class="alert alert-success">
 		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
